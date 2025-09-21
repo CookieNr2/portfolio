@@ -1,0 +1,101 @@
+@use 'sass:color';
+@import '../../styles/variables';
+
+.project-card {
+  @include card-style;
+  border-radius: 12px;
+  overflow: hidden;
+  @include card-shadow;
+  @include hover-lift;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  .project-content {
+    padding: 0;
+
+    .project-image {
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+
+      .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .project-info {
+      padding: 1rem;
+
+      .project-header {
+        @include flex-center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        .project-icon {
+          font-size: 1rem;
+        }
+
+        .project-name {
+          font-weight: 500;
+          color: $black;
+        }
+      }
+
+      .project-description {
+        color: $black;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        margin: 0 0 1rem 0;
+        opacity: 0.8;
+      }
+
+      .project-links {
+        @include flex-center;
+        gap: 0.5rem;
+        justify-content: flex-start;
+
+        .project-btn {
+          @include flex-center;
+          gap: 0.25rem;
+          padding: 0.5rem 0.75rem;
+          border-radius: 6px;
+          text-decoration: none;
+          font-size: 0.8rem;
+          font-weight: 500;
+          transition: all 0.2s ease;
+          border: 1px solid transparent;
+
+          &.live-btn {
+            background: $black;
+            color: $white;
+            
+            &:hover {
+              background: color.adjust($black, $lightness: 10%);
+              transform: translateY(-1px);
+            }
+          }
+
+          &.github-btn {
+            background: transparent;
+            color: $black;
+            border-color: $gray-border;
+            
+            &:hover {
+              background: $black;
+              color: $white;
+              transform: translateY(-1px);
+            }
+          }
+
+          span:first-child {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

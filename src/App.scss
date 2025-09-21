@@ -1,0 +1,29 @@
+@import './styles/variables';
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  background-color: $white;
+  color: $black;
+  line-height: 1.6;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.App {
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

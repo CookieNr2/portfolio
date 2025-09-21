@@ -1,0 +1,27 @@
+@use 'sass:color';
+@import '../../styles/variables';
+
+.featured-work {
+  margin-top: 3rem;
+
+  h3 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: $black;
+    margin-bottom: 1rem;
+  }
+}
+
+// Projects Grid
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

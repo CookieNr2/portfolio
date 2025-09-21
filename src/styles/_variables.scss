@@ -1,0 +1,37 @@
+// Variables - Minimal Black & White Theme
+$black: #000000;
+$white: #ffffff;
+$gray-light: #f8f9fa;
+$gray-border: #e9ecef;
+$gray-dark: #6c757d;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@mixin hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@mixin card-style {
+  background: $white;
+  border: 2px solid $gray-border;
+}
+
+@mixin highlight-card {
+  background: $black;
+  color: $white;
+  border: 2px solid $black;
+}

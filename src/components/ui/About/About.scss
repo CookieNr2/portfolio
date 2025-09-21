@@ -1,0 +1,96 @@
+@import '../../../styles/variables';
+
+.main-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.intro-section {
+  flex: 1;
+
+  .description {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+
+    .quote-line {
+      width: 4px;
+      background-color: $black;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $gray-dark;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}
+
+// Personal Info Section
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+
+  .info-item {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    @include card-style;
+    border-radius: 8px;
+    @include card-shadow;
+
+    .info-icon {
+      font-size: 1.25rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .info-text {
+      color: $black;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// Avatar Section
+.avatar-section {
+  flex-shrink: 0;
+
+  .avatar-placeholder {
+    width: 200px;
+    height: 200px;
+    background: $white;
+    border: 2px solid $gray-border;
+    border-radius: 20px;
+    @include flex-center;
+    position: relative;
+    padding: 1rem;
+
+    .avatar-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .avatar-section .avatar-placeholder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+}

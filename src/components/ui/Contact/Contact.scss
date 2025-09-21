@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+
+.contact-section {
+  margin-top: 3rem;
+  text-align: center;
+
+  .contact-links {
+    @include flex-center;
+    gap: 1rem;
+
+    .contact-link {
+      @include flex-center;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      @include hover-lift;
+
+      &.linkedin {
+        @include card-style;
+        color: $black;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      &.github {
+        @include card-style;
+        color: $black;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .contact-section .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
